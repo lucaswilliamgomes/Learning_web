@@ -31,4 +31,4 @@ Array.prototype.flatmap = function(flatCallBack) {
 }
 
 const notas2 = escola.flatmap(getNotasDaTurma);
-console.log(notas2);
+console.log(notas2)
