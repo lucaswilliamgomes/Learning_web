@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Learning Web </title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
     <h1>
-        Learning Web 
-    </h1> 
+        Learning Web
+    </h1>
     <nav>
-        <a href web-nav="teste.html"> 
-            Teste
-        </a> |
-        <a href web-nav="./Exercicios/01_Texto1.html"> 
-            Texto 1
-        </a> |
-        <a href web-nav="./Exercicios/02_Texto2.html"> 
-            Texto 2
-        </a> 
+        <a href web-nav="teste.html"> Teste</a> |
+        <a href web-nav="./Exercicios/01_Texto1.html"> Texto 1</a> |
+        <a href web-nav="./Exercicios/02_Texto2.html"> Texto 2</a> |
+        <a href web-nav="./Exercicios/03_Listas.html"> Listas</a> |
+        <a href web-nav="./Exercicios/04_ListasAninhadas.html"> Listas Aninhadas </a> |
     </nav>
-    <section id = "conteudo">
+    <section id="conteudo">
 
-    </section> 
+    </section>
     <footer>
         Curso de Web COD3R
     </footer>
     <script>
         document.querySelectorAll('[web-nav]').forEach(link => {
-            link.onclick = function (e) {
+            link.onclick = function(e) {
                 e.preventDefault()
                 const conteudo = document.getElementById('conteudo')
-                fetch (link.getAttribute('web-nav'))
-                    .then (resp => resp.text())
-                    .then (html => conteudo.innerHTML = html)
+                fetch(link.getAttribute('web-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
             }
         })
     </script>
 </body>
+
 </html>
