@@ -5,6 +5,11 @@
     <meta charset='UTF-8'>
     <title>Acessando Atributos #01</title>
     <link rel='stylesheet' href='css/estilo.css'>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
 </head>
 
 <body class='conteudo exercicio'>
@@ -15,7 +20,19 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        // atributo da img
+        const img = document.querySelector('img')
+        console.log('src ', img.src)
+        img.src = 'https://avatars1.githubusercontent.com/u/62778691?s=400&u=4aaf4be851d10dbd483ab5ea476ab10762229818&v=4'
+        console.log('href ', img.alt)
+
+        // atributo de um link
+        const link = document.querySelector('a')
+        console.log('href ', link.href)
+        link.href = 'https://google.com.br'
+        console.log('child ', link.firstChild)
+        console.log('child ', link.childNodes[0].nodeValue = 'lucas')
+
     </script>
 </body>
 

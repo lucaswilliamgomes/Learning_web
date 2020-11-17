@@ -10,7 +10,18 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        const divs = document.getElementsByTagName('div')
+        
+        Array.from(divs).forEach(apartirdosegundo)
+
+        function apartirdosegundo (element, index) {
+            if (index > 0){
+                element.classList.add('destaque')
+            }
+        }  
+
+        const terceiro = document.querySelector('.terceiro').classList.remove('destaque')
+
     </script>
 </body>
 </html>

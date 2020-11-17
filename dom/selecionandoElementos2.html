@@ -7,10 +7,33 @@
 </head>
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
+    <div wb-attrib>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <script>   
+
+        const destacar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        
+        const removerdestaque = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+
+        destacar('div')
+
+        removerdestaque('*')
+
+        destacar(':not(#primeiro)')
+
+        removerdestaque('*')
+
+        // seletor do primeiro filho 
+        destacar('div:nth-child(1)')
+
+        removerdestaque('*')
+
+        // seletor de atributos
+        destacar('[wb-attrib]')
+
+
     </script>
 </body>
 </html>
