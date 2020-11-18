@@ -17,7 +17,18 @@
         </ul>
     </div>
     <script>
-        // ...
+
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log(lista)
+        console.log('ChildNodes ', lista.childNodes)
+        
+        // Atributo destino
+        console.log('destino ', lista.destino) // Undefined
+        console.log('getAttribute ', lista.getAttribute('destino')) // escritório
+        // tem o hasAttribute que retorna um boolean
+        // tem o setAttribute que vc seta um atributo ou adiciona um atrinuto 
+
+
     </script>
 </body>
 
