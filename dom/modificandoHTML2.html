@@ -12,7 +12,18 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+
+        //troca tudo que está dentro da div pelo que vc passar
+        div.innerHTML = 'texto alterado'
+
+        //troca a própria div pelo que vc passar
+        //div.outerHTML = 'texto'
+
+        console.log(div.innerText)
+
+
+
     </script>
 </body>
 
