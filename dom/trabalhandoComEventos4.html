@@ -31,6 +31,20 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        // ...
+        // Interceptando o envio de um formulário na hora do submit 
+        const submit = document.querySelector('[wm-submit]')
+        submit.onclick = e => {
+            e.preventDefault()
+
+            const form = e.target.parentNode
+            const formData = new FormData(form)
+
+            console.log(formData.get('q'))
+            console.log(formData.get('hl'))
+
+            for (let item of formData){
+                console.log(item)
+            }
+        }
     </script>
 </body>
